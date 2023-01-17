@@ -14,6 +14,12 @@ export class DynamicErrorComponent implements OnInit {
   @Input()
   public fieldName!: string;
 
+  public get getErrorMessage() {
+    if (this.formName.controls[this.fieldName].hasError('required')) {
+      return 'Campo obrigatório.';
+    }
+    return JSON.stringify(this.formName.controls[this.fieldName]?.errors);
+  }
   ngOnInit() {
     this.formName = this.formgroupDirective.control;
   }

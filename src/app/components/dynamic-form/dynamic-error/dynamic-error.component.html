@@ -3,6 +3,6 @@
   class="alert">
   <div *ngIf="formName.controls[fieldName]?.errors">
     <!-- <div *ngIf="formName.controls[fieldName]?.errors.required"> -->
-    * {{fieldName}}
+    * {{getErrorMessage}}
   </div>
 </div>
