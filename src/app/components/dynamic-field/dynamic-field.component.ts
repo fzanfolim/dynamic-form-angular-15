@@ -1,3 +1,4 @@
+import { DynamicDatepickerComponent } from './dynamic-datepicker/dynamic-datepicker.component';
 import { DynamicCheckboxsComponent } from './dynamic-checkboxs/dynamic-checkboxs.component';
 import { DynamicRadioComponent } from './dynamic-radio/dynamic-radio.component';
 import {
@@ -36,7 +37,7 @@ export class DynamicFieldComponent {
     },
     {
       name: 'date',
-      component: DynamicInputComponent,
+      component: DynamicDatepickerComponent,
     },
     {
       name: 'checkbox',

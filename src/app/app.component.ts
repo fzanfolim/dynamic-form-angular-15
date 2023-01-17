@@ -56,7 +56,7 @@ export class AppComponent {
     },
     newsletterIn: {
       label: 'Suscribe to newsletter',
-      value: 'email',
+      value: false,
       type: 'checkbox',
     },
     suscriptionType: {

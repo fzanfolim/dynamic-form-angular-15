@@ -1,6 +1,11 @@
 <form [formGroup]="formName">
-  <label>
+  <!-- <label>
     {{ field.label }}
     <input type="checkbox" [name]="field.fieldName" [formControlName]="field.fieldName" [value]="field.value" />
-  </label>
+  </label> -->
+
+
+  <mat-checkbox [formControlName]="field.fieldName">{{ field.label }}</mat-checkbox>
+
+
 </form>
