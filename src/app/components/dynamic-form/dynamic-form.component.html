@@ -1,0 +1,9 @@
+<form [formGroup]="dynamicFormGroup">
+  <div *ngFor="let field of fields">
+    <d4b-dynamic-field [field]="field"></d4b-dynamic-field>
+    <d4b-dynamic-error [fieldName]="field.fieldName"></d4b-dynamic-error>
+  </div>
+</form>
+
+
+<pre>{{dynamicFormGroup.getRawValue() | json}}</pre>
