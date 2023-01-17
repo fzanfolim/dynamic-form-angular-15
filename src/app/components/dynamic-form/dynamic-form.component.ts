@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {
-  FormControl,
   FormControlOptions,
-  FormGroup,
   UntypedFormControl,
   UntypedFormGroup,
   ValidatorFn,
@@ -22,6 +20,11 @@ export class DynamicFormComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
+
+    // this.dynamicFormGroup.valueChanges.subscribe((x) => {
+    //   console.log('form value changed', this.dynamicFormGroup);
+    //   console.log(x);
+    // });
   }
 
   private buildForm() {
@@ -51,7 +54,7 @@ export class DynamicFormComponent implements OnInit {
     if (!rules) {
       return [];
     }
-    console.log(rules);
+
     const validators: any = Object.keys(rules).map((rule) => {
       switch (rule) {
         case 'required':
