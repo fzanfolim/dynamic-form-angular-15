@@ -5,5 +5,9 @@
     <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
       <mat-icon>close</mat-icon>
     </button> -->
+    <mat-error>
+      <d4b-dynamic-error [fieldName]="field.fieldName"></d4b-dynamic-error>
+    </mat-error>
+
   </mat-form-field>
 </form>
