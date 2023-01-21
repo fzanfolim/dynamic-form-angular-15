@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormModelServiceService } from '../services/form-model-service.service';
 
 @Component({
   selector: 'd4b-layout',
@@ -6,77 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
-  model = {
-    firstname: {
-      type: 'text',
-      value: '',
-      label: 'Nome',
-      rules: {
-        required: true,
-      },
-    },
-    lastname: {
-      type: 'text',
-      value: '',
-      label: 'LastName',
-    },
-    address: {
-      type: 'text',
-      value: '',
-      label: 'Address',
-    },
-    age: {
-      type: 'number',
-      value: '',
-      label: 'age',
-    },
-    birthDay: {
-      type: 'date',
-      value: '',
-      label: 'Birthday',
-    },
-    typeBussines: {
-      label: 'Bussines Type',
-      value: 'premium',
-      type: 'radio',
-      options: [
-        {
-          label: 'Enterprise',
-          value: '1500',
-        },
-        {
-          label: 'Home',
-          value: '6',
-        },
-        {
-          label: 'Personal',
-          value: '1',
-        },
-      ],
-    },
-    newsletterIn: {
-      label: 'Suscribe to newsletter',
-      value: false,
-      type: 'checkbox',
-    },
-    suscriptionType: {
-      label: 'Suscription Type',
-      value: 'premium',
-      type: 'select',
-      options: [
-        {
-          label: 'Pick one',
-          value: '',
-        },
-        {
-          label: 'Premium',
-          value: 'premium',
-        },
-        {
-          label: 'Basic',
-          value: 'basic',
-        },
-      ],
-    },
-  };
+  constructor(
+    private formModelService: FormModelServiceService
+  ) {
+
+  }
+  model = this.formModelService.get('formA');
 }
